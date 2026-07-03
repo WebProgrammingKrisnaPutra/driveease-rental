@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+/* Premium Base Settings */
+body {
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0d0d0d;
+}
+.light ::-webkit-scrollbar-track {
+    background: #f5f5f5;
+}
+::-webkit-scrollbar-thumb {
+    background: #262626;
+    border-radius: 9999px;
+}
+.light ::-webkit-scrollbar-thumb {
+    background: #d4d4d8;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #D4AF37;
+}
+
+/* Premium Glassmorphism */
+.premium-glass {
+    background: rgba(22, 22, 22, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.light .premium-glass {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Glow Accent Hover */
+.gold-glow-hover {
+    transition: all 0.3s ease;
+}
+.gold-glow-hover:hover {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.35);
+    transform: translateY(-2px);
+}
+
+/* Custom Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Map Marker Popups styling */
+.leaflet-popup-content-wrapper {
+    background: #161616 !important;
+    color: #ffffff !important;
+    border: 1px solid #27272a !important;
+    border-radius: 12px !important;
+}
+.light .leaflet-popup-content-wrapper {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #e2e8f0 !important;
+}
+.leaflet-popup-tip {
+    background: #161616 !important;
+}
+.light .leaflet-popup-tip {
+    background: #ffffff !important;
+}
+
+/* Soft Neon Grid Accent */
+.neon-border {
+    position: relative;
+}
+.neon-border::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(to bottom right, rgba(212, 175, 55, 0.2), transparent, rgba(255, 255, 255, 0.05));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
